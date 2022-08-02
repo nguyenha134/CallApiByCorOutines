@@ -1,11 +1,10 @@
 package com.example.callapicoroutines.model
 
-
 import com.google.gson.annotations.SerializedName
 
 data class MovieItem(
     @SerializedName("bio")
-    val bio: String,
+    val bio: String?,
     @SerializedName("createdby")
     val createdby: String,
     @SerializedName("firstappearance")

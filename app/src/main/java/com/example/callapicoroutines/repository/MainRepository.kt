@@ -1,8 +1,8 @@
-package com.example.callapicoroutines.repo
+package com.example.callapicoroutines.repository
 
 import com.example.callapicoroutines.model.MovieItem
 import com.example.callapicoroutines.network.NetworkState
-import com.example.testcallapibycoroutines.network.RetroService
+import com.example.callapicoroutines.network.RetroService
 
 class MainRepository constructor(private val retrofitService: RetroService) {
 
@@ -19,4 +19,8 @@ class MainRepository constructor(private val retrofitService: RetroService) {
             NetworkState.Error(response)
         }
     }
+}
+
+enum class Gender {
+    MALE, FEMALE, UNKNOWN
 }

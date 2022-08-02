@@ -1,4 +1,4 @@
-package com.example.callapicoroutines.constant
+package com.example.callapicoroutines.utils
 
 import com.example.callapicoroutines.model.MovieItem
 

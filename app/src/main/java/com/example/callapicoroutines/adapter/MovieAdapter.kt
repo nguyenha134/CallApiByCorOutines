@@ -1,31 +1,25 @@
 package com.example.callapicoroutines.adapter
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.callapicoroutines.constant.ValidationUtil
+import com.example.callapicoroutines.utils.ValidationUtil
 import com.example.callapicoroutines.databinding.ItemMoviesBinding
 import com.example.callapicoroutines.model.MovieItem
 
 class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MainViewHolder>() {
 
-    var movieList = mutableListOf<MovieItem>()
-
-    fun setMovies(movies: List<MovieItem>) {
-        this.movieList = movies.toMutableList()
-        notifyDataSetChanged()
-    }
+    private val movieList = mutableListOf<MovieItem>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MainViewHolder {
-
         val inflater = LayoutInflater.from(parent.context)
         val binding = ItemMoviesBinding.inflate(inflater, parent, false)
         return MainViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: MainViewHolder, position: Int) {
-
         val movie = movieList[position]
         if (ValidationUtil.validateMovie(movie)) {
             holder.binding.tvNameMovie.text = movie.name
@@ -42,5 +36,12 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MainViewHolder>() {
     }
 
     class MainViewHolder(val binding: ItemMoviesBinding) : RecyclerView.ViewHolder(binding.root) {
+    }
+
+    @SuppressLint("NotifyDataSetChanged")
+    fun setMovies(movies: List<MovieItem>) {
+        movieList.clear()
+        movieList.addAll(movies)
+        notifyDataSetChanged()
     }
 }

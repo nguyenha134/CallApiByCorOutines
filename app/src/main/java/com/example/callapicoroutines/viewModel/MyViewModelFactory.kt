@@ -2,7 +2,7 @@ package com.example.callapicoroutines.viewModel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import com.example.callapicoroutines.repo.MainRepository
+import com.example.callapicoroutines.repository.MainRepository
 
 class MyViewModelFactory constructor(private val repository: MainRepository): ViewModelProvider.Factory {
 
