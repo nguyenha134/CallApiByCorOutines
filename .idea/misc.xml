@@ -4,9 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/LearnKotlin/CallApiCoroutines/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/LearnKotlin/CallApiCoroutines/app/src/main/res/layout/item_movies.xml" value="0.20199275362318841" />
       </map>
     </option>
   </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_16" project-jdk-name="16" project-jdk-type="JavaSDK" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_16_PREVIEW" project-jdk-name="16" project-jdk-type="JavaSDK" />
 </project>

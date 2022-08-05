@@ -20,7 +20,3 @@ class MainRepository constructor(private val retrofitService: RetroService) {
         }
     }
 }
-
-enum class Gender {
-    MALE, FEMALE, UNKNOWN
-}
