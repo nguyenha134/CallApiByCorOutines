@@ -1,6 +1,7 @@
 package com.example.callapicoroutines
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -62,9 +63,9 @@ class MainActivity : AppCompatActivity() {
 
         viewModel.loading.observe(this, Observer {
             if (it) {
-                binding.progressbar.visibility = View.VISIBLE
-            } else {
                 binding.progressbar.visibility = View.GONE
+            } else {
+                binding.progressbar.visibility = View.VISIBLE
             }
         })
     }
